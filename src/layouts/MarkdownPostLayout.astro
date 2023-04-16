@@ -18,6 +18,10 @@ const { frontmatter } = Astro.props;
         background-color: lightgray;
         margin-right: 0.5rem;
     }
+
+    img {
+        width: 100%;
+    }
 </style>
 <BaseLayout pageTitle={frontmatter.title}>
 <p class="publish-details">Written by {frontmatter.author} on {frontmatter.pubDate.slice(0, 10)}</p>
