@@ -16,7 +16,7 @@ const fontWeight = "bold";
 const textTransform = "uppercase";
 
 const happy = true;
-const finished = false;
+const finished = true;
 const goal = 3;
 ---
 <style define:vars={{skillColor, fontWeight, textTransform}}>
@@ -48,7 +48,7 @@ const goal = 3;
     <ul>
         {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
-    {happy && <p>I am happy to be learning Astro!</p>}
-    {finished && <p>I finished this tutorial</p>}
+    <p>{happy && 'I am happy to be learning Astro!'}
+    {finished && <span>And I finished the <a href="https://docs.astro.build/en/tutorial/">tutorial</a>!</span>}</p>
     {goal === 3 ? <p>My goal is to finish in 3 days!</p> : <p>My goal is not 3 days away.</p>}
 </BaseLayout>
